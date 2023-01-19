@@ -16,7 +16,7 @@ COPY . $APP_PATH
 RUN poetry install
 RUN python -m compileall ${APP_PATH}/app
 
-#
+##
 # Run server
 EXPOSE 8000
 ENTRYPOINT ["poetry","run","python","-m","uvicorn","--host","0.0.0.0","bitcoin_decoder.main:app"]
